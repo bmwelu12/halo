@@ -1,0 +1,20 @@
+# Sentinel: AutoTrain text classification with default settings (autotrain-advanced 0.8.36).
+# Only the AutoTrain UI's own defaults are set below (fp16, tensorboard); everything else is left at default.
+task: text_classification
+base_model: answerdotai/ModernBERT-base
+project_name: halo-sentinel
+log: tensorboard
+backend: local
+data:
+  path: ml/data/out
+  train_split: train
+  valid_split: validation
+  column_mapping:
+    text_column: text
+    target_column: target
+params:
+  mixed_precision: fp16
+hub:
+  username: ${HF_USERNAME}
+  token: ${HF_TOKEN}
+  push_to_hub: true

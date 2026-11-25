@@ -1,0 +1,10 @@
+{
+  "train": 6004,
+  "validation": 809,
+  "test": 1183,
+  "labels": {
+    "safe": 791,
+    "suspicious": 750,
+    "scam": 4463
+  }
+}

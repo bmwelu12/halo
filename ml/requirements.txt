@@ -1,0 +1,3 @@
+# Only needed to evaluate a trained model locally (training runs in the Kaggle notebook).
+transformers==4.48.0
+torch
